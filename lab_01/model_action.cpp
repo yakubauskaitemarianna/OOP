@@ -60,11 +60,13 @@ int LoadModel(Model &model, const Create &act) {
         return ret;
     Model buff;
     ret = LoadModel(buff, stream);
+    Close_Stream(stream);
+
     if(!ret)
         ret = Free_model(model);
-    if(!ret)
         model = buff;
-    Close_Stream(stream);
+        Free_Point_arr(vertex_arr &vertex);
+
     return ret;
 }
 

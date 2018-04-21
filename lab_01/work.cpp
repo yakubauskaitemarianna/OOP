@@ -32,7 +32,7 @@ int main_controller(My_Scene &scene, const t_action &act, type_action t)
         result = Draw_model(scene, model);
         break;
     default:
-        result = -1;
+        result = UNKNOWN;
     }
     return result;
 }

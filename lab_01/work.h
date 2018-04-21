@@ -6,7 +6,8 @@
 #include "errors.h"
 #include "model.h"
 
-enum type_action { ROTATE, CREATE, MOVE, SCALE, FREE, SAVE, DRAW };
+enum type_action { ROTATE, CREATE, MOVE, SCALE, FREE, SAVE, DRAW, UNKNOWN };
+
 union t_action {
     Rotate rotat;
     Scale scal;
@@ -14,8 +15,8 @@ union t_action {
     Move mov;
     bool free;
 };
-// принимает на вход модель, действие (одно из описанных)
-// и тип действия
+
+// принимает на вход модель, действие (одно из описанных) и тип действия
 int main_controller(My_Scene &scene, const t_action &act, type_action t);
 
 #endif // WORK_H

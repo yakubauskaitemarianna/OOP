@@ -1,10 +1,12 @@
 #ifndef POINT_ARR_H
 #define POINT_ARR_H
 #include "point.h"
+
 struct vertex_arr {
     Point *arr = NULL;
     int N_v = 0;
 };
+
 vertex_arr Init_vertex();
 //преобразование массива точек
 int Rotate_point_arr(vertex_arr &vert, const Rotate &act);
